@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <script src="scripts.js"></script>
+    <head>
+        <title>
+            UAT Space Program
+        </title>
+    </head>
+    <body>
+        <script>
+            var mep1 = new classtest("Yes it's working");
+            alert("Testing class result: "+ mep1.test1);
+            var mySound;  
+            playSpaceSnd();  
+            var theTime = new Date();
+            var tempTime = new Date();
+            var time_interval = 5000;
+            var time_iteration = 0;
+            var running = true;
+            var index = 0;
+            var timer;   
+            updateDisplay();
+        </script>
+        <table class="tableTop">
+            <tr>
+                <td>
+                    <img src="UATSpace.png">
+                </td>
+                <td>
+                    <h1>
+                        UAT Space Program
+                    </h1>
+                </td>
+            </tr>
+        </table>
+        <table id="data" border="2" width="705" class="table2">
+            <col style="width: 35%;">
+            <col style="width: 35%;">
+            <thead>
+                <tr>
+                    <th align="left">
+                        Data Type
+                    </th>
+                    <th align="left">
+                        Reading
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="seconds"></tr>
+                <tr id=latitude></tr>
+                <tr id=longitude></tr>
+                <tr id=gps_altitude></tr>
+                <tr id=bmpSensor_altitude></tr>
+                <tr id=bmpSensor_pressure></tr>
+                <tr id=bmpSensor_temp></tr>
+                <tr id=digSensor_temp></tr>
+                <tr id=cssSensor_temp></tr>
+                <tr id=cssTemp_eCO2></tr>
+                <tr id=cssTemp_TVOC></tr>
+                <tr id=UV></tr>
+                <tr id=accelX></tr>
+                <tr id=accelY></tr>
+                <tr id=accelZ></tr>
+                <tr id=magneticX></tr>
+                <tr id=magneticY></tr>
+                <tr id=magneticZ></tr>
+                <tr id=gyroX></tr>
+                <tr id=gyroY></tr>
+                <tr id=gyroZ></tr>
+            </tbody>
+        </table>
+        <br>
+        <p>
+        <table class="table3">
+            <thead>
+                <tr>
+                    <th>The Time Is : </th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <tr id="time">
+
+                </tr>
+            </tbody>
+        </table>
+            <input id="startButton" type="button" value="Start Here" 
+                onclick="start();" class="button"/>
+            <input id="stopButton" type="button" value="Stop Here" 
+                onclick="stop();" class="button"/>
+            <br>
+            <input id="missionStatus" type="button" value="Mission Status"
+                onclick="missionStat();" class="button"/>
+            <input id="playSoundBtn" type="button" value="Play Space Sound"
+                onclick="playSpaceSnd();" class="button2"/>
+            <input id="checkTimeBtn" type="button" value="Check Time" 
+            onclick="updateDisplay();" class="button2">
+        </p>
+        <br><br>
+        The time is: <div id="time"></div>
+        <script>
+           
+            /*function missionStat(){
+                alert("The Space Craft "+launch1.spaceCraftName+" will lift off on "+launch1.launchDateMonth+
+                " "+launch1.launchDateDay+ ", "+launch1.launchDateYear+" with "+launch1.numOfAstronauts+ " people abord."  )
+            }*/
+        </script>
+    </body>
+</html>
